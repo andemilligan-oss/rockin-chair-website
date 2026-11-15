@@ -103,10 +103,23 @@
     <section class="booking section wrap" id="kontakt" aria-labelledby="kontakt-titel">
       <div class="section-number">04 / KONTAKT</div>
       <h2 id="kontakt-titel">Kontakt &amp;<br><em>Buchung.</em></h2>
-      <p>Für Auftrittsanfragen und weitere Informationen erreicht ihr uns über Instagram oder unsere verlinkten Kontaktmöglichkeiten.</p>
+      <p>Für Buchungsanfragen kannst du uns direkt schreiben.</p>
+      <form id="kontaktformular" class="contact-form" aria-label="Buchungsanfrage" novalidate>
+        <div class="contact-grid">
+          <div class="field"><label for="anfrage-name">Name *</label><input type="text" id="anfrage-name" name="name" autocomplete="name" required maxlength="120"></div>
+          <div class="field"><label for="anfrage-email">E-Mail-Adresse *</label><input type="email" id="anfrage-email" name="email" autocomplete="email" required maxlength="254"></div>
+          <div class="field"><label for="anfrage-datum">Datum der Veranstaltung</label><input type="date" id="anfrage-datum" name="datum"></div>
+          <div class="field"><label for="anfrage-ort">Ort der Veranstaltung</label><input type="text" id="anfrage-ort" name="ort" maxlength="160"></div>
+          <div class="field field-wide"><label for="anfrage-nachricht">Deine Nachricht *</label><textarea id="anfrage-nachricht" name="nachricht" required rows="5" maxlength="3000" placeholder="Worum geht es bei deiner Anfrage?"></textarea></div>
+        </div>
+        <p class="form-note">Mit „E-Mail vorbereiten“ öffnet sich dein E-Mail-Programm. Bitte sende die Nachricht dort anschließend ab. Die Angaben werden nicht auf der Website gespeichert.</p>
+        <button class="button button-primary" type="submit">E-Mail vorbereiten <span aria-hidden="true">↗</span></button>
+        <p id="formular-status" class="form-status" role="status" aria-live="polite"></p>
+      </form>
+      <p class="contact-direct">Direkt per E-Mail: <a href="mailto:ande.milligan@googlemail.com">ande.milligan@googlemail.com</a></p>
       <div class="booking-actions">
-        <a class="button button-primary" href="https://www.instagram.com/rockin_chair2/" target="_blank" rel="noopener noreferrer">Über Instagram schreiben <span aria-hidden="true">↗</span></a>
-        <a class="button button-outline" href="https://linktr.ee/Rockin_Chair" target="_blank" rel="noopener noreferrer">Weitere Kontaktwege <span aria-hidden="true">↗</span></a>
+        <a class="button button-primary" href="https://www.instagram.com/rockin_chair2/" target="_blank" rel="noopener noreferrer">Instagram <span aria-hidden="true">↗</span></a>
+        <a class="button button-outline" href="https://linktr.ee/Rockin_Chair" target="_blank" rel="noopener noreferrer">Weitere Links <span aria-hidden="true">↗</span></a>
       </div>
     </section>
   </main>
