@@ -20,7 +20,7 @@ Die Website ist vollständig **deutschsprachig**. Sie umfasst:
 
 Das Bandmotiv – ein Schaukelstuhl vor einem lodernden Feuer – gibt die Richtung vor: Schwarz, tiefes Rot, Orange, warmes Weiß, markante Typografie und ein authentischer, ungekünstelter Auftritt.
 
-**Wichtig:** Das Originalmotiv aus dem Chat muss als Datei unter `assets/rockin-chair.jpg` in dieses Repository hochgeladen werden. Ohne diese Datei zeigt die Website eine farblich passende Ersatzgestaltung.
+**Bandmotiv:** Die Originalgrafik liegt derzeit im Hauptverzeichnis als `Screenshot_2026-11-15-20-19-23-424_com.google.android.apps.photos-edit.jpg` und ist in `styles.css` eingebunden.
 
 ## Technische Umsetzung
 
@@ -42,7 +42,7 @@ Die Seite wird daraufhin über GitHub Pages veröffentlicht. Eine eigene Domain 
 - Bandtexte und Musik: `index.html`
 - Gestaltung: `styles.css`
 - Interaktion: `script.js`
-- Bandfoto: `assets/rockin-chair.jpg`
+- Bandmotiv: `Screenshot_2026-11-15-20-19-23-424_com.google.android.apps.photos-edit.jpg`
 
 Es werden bewusst keine unbestätigten Auftrittstermine, persönlichen Kontaktdaten oder Namen einzelner Bandmitglieder veröffentlicht.
 
