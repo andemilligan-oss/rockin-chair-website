@@ -36,3 +36,20 @@
  .hero-actions .button{width:auto;gap:12px;padding:14px 16px}
  .live h2{font-size:50px}
 }
+
+
+/* Schlichtes Buchungsformular */
+.contact-form{width:min(720px,100%);text-align:left;margin:40px auto 0}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:23px}
+.field{display:flex;flex-direction:column;gap:9px}.field-wide{grid-column:1 / -1}
+.field label{font-size:12px;font-weight:700;letter-spacing:.04em;color:var(--cream)}
+.field input,.field textarea{width:100%;border:1px solid var(--border);border-radius:0;background:#1d1714;color:var(--cream);padding:15px 16px;font:16px/1.5 var(--body)}
+.field textarea{resize:vertical;min-height:140px}
+.field input:focus-visible,.field textarea:focus-visible{outline:2px solid var(--orange);outline-offset:2px}
+.field input::placeholder,.field textarea::placeholder{color:#a79991}
+.form-note{font-size:12px;line-height:1.6;color:var(--muted);margin:19px 0 23px}
+.form-status{font-size:13px;color:var(--orange-light);min-height:1.5em;margin-top:14px}
+.contact-direct{font-size:14px;color:var(--muted);margin:28px auto 0}
+.contact-direct a{text-decoration:underline;text-underline-offset:4px;color:var(--cream);overflow-wrap:anywhere}
+.booking-actions{margin-top:28px}
+@media(max-width:600px){.contact-grid{grid-template-columns:1fr}.field-wide{grid-column:auto}.contact-form .button{width:100%}}
