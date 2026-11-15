@@ -28,38 +28,40 @@ document.querySelector('#jahr').textContent = new Date().getFullYear();
 
 const formular = document.querySelector('#kontaktformular');
 if (formular) {
-  formular.addEventListener('submit', (ereignis) => {
+  formular.addEventListener('submit', async (ereignis) => {
     ereignis.preventDefault();
     const status = document.querySelector('#formular-status');
     if (!formular.reportValidity()) {
-      status.textContent = 'Bitte fülle die Pflichtfelder aus.';
+      status.textContent = 'Bitte alle Pflichtfelder ausfüllen.';
       return;
     }
-    const daten = new FormData(formular);
-    const name = String(daten.get('name') || '').trim();
-    const email = String(daten.get('email') || '').trim();
-    const datum = String(daten.get('datum') || '').trim();
-    const ort = String(daten.get('ort') || '').trim();
-    const nachricht = String(daten.get('nachricht') || '').trim();
-    if (!name || !email || !nachricht) {
-      status.textContent = 'Bitte fülle die Pflichtfelder aus.';
-      return;
+    const schaltflaeche = formular.querySelector('button[type="submit"]');
+    schaltflaeche.disabled = true;
+    status.textContent = 'Die Anfrage wird gesendet …';
+    try {
+      const felder = new FormData();
+      felder.append('_subject', 'Buchungsanfrage Rockin’ Chair');
+      felder.append('_template', 'table');
+      felder.append('name', formular.elements.namedItem('name').value.trim());
+      felder.append('email', formular.elements.namedItem('email').value.trim());
+      felder.append('Veranstaltungsdatum', formular.elements.namedItem('datum').value || 'Noch offen');
+      felder.append('Veranstaltungsort', formular.elements.namedItem('ort').value.trim() || 'Noch offen');
+      felder.append('Nachricht', formular.elements.namedItem('nachricht').value.trim());
+      const antwort = await fetch(formular.action, {
+        method: 'POST',
+        headers: {Accept: 'application/json'},
+        body: felder
+      });
+      const ergebnis = await antwort.json();
+      if (!antwort.ok || ergebnis.success === false || ergebnis.success === 'false') {
+        throw new Error('Versand nicht bestätigt');
+      }
+      formular.reset();
+      status.textContent = 'Deine Anfrage wurde übermittelt. Vielen Dank!';
+    } catch (fehler) {
+      status.textContent = 'Die Anfrage konnte nicht gesendet werden. Bitte versuche es erneut oder nutze Instagram.';
+    } finally {
+      schaltflaeche.disabled = false;
     }
-    const betreff = 'Buchungsanfrage Rockin’ Chair' + (datum ? ' – ' + datum : '');
-    const inhalt = [
-      'Buchungsanfrage über die Rockin’-Chair-Website',
-      '',
-      'Name: ' + name,
-      'E-Mail: ' + email,
-      'Veranstaltungsdatum: ' + (datum || 'Noch offen'),
-      'Veranstaltungsort: ' + (ort || 'Noch offen'),
-      '',
-      'Nachricht:',
-      nachricht
-    ].join('\n');
-    const url = 'mailto:ande.milligan@googlemail.com?subject=' +
-      encodeURIComponent(betreff) + '&body=' + encodeURIComponent(inhalt);
-    status.textContent = 'Die Nachricht wird in deinem E-Mail-Programm geöffnet. Bitte dort noch absenden.';
-    window.location.href = url;
   });
 }
