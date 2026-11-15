@@ -100,29 +100,37 @@
       <div class="influences"><span>UNTER ANDEREM INSPIRIERT VON</span><p>Creedence Clearwater Revival <b>·</b> Jimi Hendrix <b>·</b> Thin Lizzy <b>·</b> John Mayer <b>·</b> Ray LaMontagne</p></div>
     </section>
 
-    <section class="booking section wrap" id="kontakt" aria-labelledby="kontakt-titel">
-      <div class="section-number">04 / KONTAKT</div>
-      <h2 id="kontakt-titel">Kontakt &amp;<br><em>Buchung.</em></h2>
-      <p>Für Buchungsanfragen kannst du uns direkt schreiben.</p>
-      <form id="kontaktformular" class="contact-form" aria-label="Buchungsanfrage" action="https://formsubmit.co/ajax/ande.milligan@googlemail.com" method="POST">
-        <input type="hidden" name="_subject" value="Buchungsanfrage Rockin’ Chair">
-        <input type="hidden" name="_template" value="table">
-        <div class="contact-grid">
-          <div class="field"><label for="anfrage-name">Name *</label><input type="text" id="anfrage-name" name="name" autocomplete="name" required maxlength="120"></div>
-          <div class="field"><label for="anfrage-email">E-Mail-Adresse *</label><input type="email" id="anfrage-email" name="email" autocomplete="email" required maxlength="254"></div>
-          <div class="field"><label for="anfrage-datum">Datum der Veranstaltung</label><input type="date" id="anfrage-datum" name="datum"></div>
-          <div class="field"><label for="anfrage-ort">Ort der Veranstaltung</label><input type="text" id="anfrage-ort" name="ort" maxlength="160"></div>
-          <div class="field field-wide"><label for="anfrage-nachricht">Deine Nachricht *</label><textarea id="anfrage-nachricht" name="nachricht" required rows="5" maxlength="3000" placeholder="Worum geht es bei deiner Anfrage?"></textarea></div>
+    <section class="booking section" id="kontakt" aria-labelledby="kontakt-titel">
+      <div class="wrap">
+        <div class="section-number">04 / KONTAKT</div>
+        <div class="contact-layout">
+          <div class="contact-intro">
+            <h2 id="kontakt-titel">Kontakt <em>&amp; Buchung</em></h2>
+            <p>Ihr möchtet Rockin’ Chair für eine Veranstaltung anfragen? Schreibt uns über das Formular.</p>
+            <div class="contact-social">
+              <span>WEITERE KONTAKTMÖGLICHKEITEN</span>
+              <a href="https://www.instagram.com/rockin_chair2/" target="_blank" rel="noopener noreferrer">Instagram <span aria-hidden="true">↗</span></a>
+              <a href="https://linktr.ee/Rockin_Chair" target="_blank" rel="noopener noreferrer">Weitere Links <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+          <form id="kontaktformular" class="contact-form" aria-label="Buchungsanfrage" action="https://formsubmit.co/ajax/ande.milligan@googlemail.com" method="POST">
+            <input type="hidden" name="_subject" value="Buchungsanfrage Rockin’ Chair">
+            <input type="hidden" name="_template" value="table">
+            <div class="contact-grid">
+              <div class="field"><label for="anfrage-name">Name <span aria-hidden="true">*</span></label><input type="text" id="anfrage-name" name="name" autocomplete="name" required maxlength="120"></div>
+              <div class="field"><label for="anfrage-email">E-Mail-Adresse <span aria-hidden="true">*</span></label><input type="email" id="anfrage-email" name="email" autocomplete="email" required maxlength="254"></div>
+              <div class="field"><label for="anfrage-datum">Datum der Veranstaltung</label><input type="date" id="anfrage-datum" name="datum"></div>
+              <div class="field"><label for="anfrage-ort">Ort der Veranstaltung</label><input type="text" id="anfrage-ort" name="ort" maxlength="160"></div>
+              <div class="field field-wide"><label for="anfrage-nachricht">Nachricht <span aria-hidden="true">*</span></label><textarea id="anfrage-nachricht" name="nachricht" required rows="5" maxlength="3000" placeholder="Worum geht es bei eurer Anfrage?"></textarea></div>
+            </div>
+            <div class="form-bottom">
+              <label class="privacy-check" for="anfrage-einwilligung"><input type="checkbox" id="anfrage-einwilligung" required><span>Ich bin mit der Übermittlung meiner Angaben zur Bearbeitung dieser Anfrage einverstanden. *</span></label>
+              <p class="form-note">Die Anfrage wird über den externen Formulardienst FormSubmit übermittelt.</p>
+              <button class="button button-primary contact-submit" type="submit">Anfrage senden <span aria-hidden="true">↗</span></button>
+              <p id="formular-status" class="form-status" role="status" aria-live="polite"></p>
+            </div>
+          </form>
         </div>
-        <p class="form-note">Die Angaben werden zur Bearbeitung der Anfrage über den externen Formulardienst FormSubmit an die Band übermittelt. Bitte keine vertraulichen Informationen eintragen.</p>
-        <div class="field privacy-check"><label><input type="checkbox" id="anfrage-einwilligung" required> Ich bin mit der Übermittlung meiner Angaben zur Bearbeitung der Anfrage einverstanden. *</label></div>
-        <button class="button button-primary" type="submit">Anfrage senden <span aria-hidden="true">↗</span></button>
-        <p id="formular-status" class="form-status" role="status" aria-live="polite"></p>
-      </form>
-      <p class="contact-direct">Direkt per E-Mail: <a href="mailto:ande.milligan@googlemail.com">ande.milligan@googlemail.com</a></p>
-      <div class="booking-actions">
-        <a class="button button-primary" href="https://www.instagram.com/rockin_chair2/" target="_blank" rel="noopener noreferrer">Instagram <span aria-hidden="true">↗</span></a>
-        <a class="button button-outline" href="https://linktr.ee/Rockin_Chair" target="_blank" rel="noopener noreferrer">Weitere Links <span aria-hidden="true">↗</span></a>
       </div>
     </section>
   </main>
