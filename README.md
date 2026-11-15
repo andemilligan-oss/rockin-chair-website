@@ -14,7 +14,7 @@ Die Website ist vollständig **deutschsprachig**. Sie umfasst:
 - Informationen zur Band
 - Musik und Repertoire
 - Konzerttermine
-- Kontakt und Buchungsanfragen
+- Kontaktformular und Buchungsanfragen
 
 ## Gestaltung
 
@@ -50,6 +50,12 @@ Es werden bewusst keine unbestätigten Auftrittstermine, persönlichen Kontaktda
 
 - [Instagram](https://www.instagram.com/rockin_chair2/)
 - [Linktree](https://linktr.ee/Rockin_Chair)
+
+## Kontaktformular
+
+Das Formular in `index.html` erstellt über `script.js` eine vorbereitete E-Mail an `ande.milligan@googlemail.com`. Der Versand erfolgt **nicht automatisch**: Die besuchende Person muss die E-Mail im eigenen E-Mail-Programm absenden. GitHub Pages besitzt selbst keinen E-Mail-Versanddienst. Das Formular speichert keine Angaben auf dem Server.
+
+Für einen späteren direkten Versand ohne E-Mail-Programm wird ein separat einzurichtender Formular-Dienst oder Server-Endpunkt benötigt.
 
 ## Rechtliches
 
