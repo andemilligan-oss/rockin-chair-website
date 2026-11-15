@@ -60,3 +60,36 @@
 .privacy-check label{display:flex;align-items:flex-start;gap:12px;line-height:1.6;font-size:12px;font-weight:500;letter-spacing:0;color:var(--muted);cursor:pointer}
 .privacy-check input[type="checkbox"]{width:18px;height:18px;min-width:18px;margin:2px 0 0;padding:0;accent-color:var(--orange)}
 .contact-form button[disabled]{opacity:.6;cursor:wait}
+
+
+/* Kontaktbereich – übersichtliches, responsives Raster */
+.booking.section{padding-block:clamp(76px,9vw,126px);text-align:left}
+.booking .section-number{text-align:left;margin-bottom:clamp(32px,4vw,58px)}
+.contact-layout{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(45px,7vw,110px);align-items:start}
+.contact-intro{min-width:0}
+.booking .contact-intro h2{font-size:clamp(48px,5.5vw,82px);line-height:1.07;letter-spacing:-.035em;margin:0 0 26px;overflow-wrap:normal}
+.contact-intro h2 em{font-style:normal;color:var(--orange)}
+.booking .contact-intro>p{color:var(--muted);font-size:16px;line-height:1.75;max-width:390px;margin:0}
+.contact-social{margin-top:clamp(48px,6vw,88px);padding-top:18px;border-top:1px solid var(--border);display:flex;flex-direction:column;gap:14px}
+.contact-social>span{font-size:10px;letter-spacing:.14em;color:var(--muted);font-weight:700;margin-bottom:7px}
+.contact-social a{display:flex;justify-content:space-between;gap:12px;max-width:280px;font-size:14px;font-weight:600;padding:7px 0;transition:color .2s}
+.contact-social a:hover{color:var(--orange-light)}
+.contact-social a span{color:var(--orange)}
+.booking .contact-form{width:100%;margin:0;min-width:0;text-align:left;box-sizing:border-box}
+.contact-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:20px;row-gap:23px}
+.contact-form .field{display:flex;flex-direction:column;min-width:0;gap:9px}
+.contact-form .field-wide{grid-column:1/-1}
+.contact-form .field label{font-size:12px;font-weight:600;letter-spacing:.02em;line-height:1.4;color:var(--cream);text-align:left}
+.contact-form .field label span{color:var(--orange)}
+.contact-form .field input:not([type="checkbox"]),.contact-form .field textarea{display:block;width:100%;min-width:0;height:52px;margin:0;padding:13px 14px;border:1px solid rgba(247,238,228,.25);background:#1e1916;border-radius:3px;color:var(--cream);font:400 16px/1.5 var(--body);box-sizing:border-box;appearance:auto}
+.contact-form .field textarea{height:auto;min-height:156px;resize:vertical}
+.contact-form .field input:focus-visible,.contact-form .field textarea:focus-visible{outline:2px solid var(--orange);outline-offset:2px;border-color:var(--orange)}
+.contact-form .form-bottom{margin-top:24px}
+.contact-form .privacy-check{display:flex;align-items:flex-start;gap:12px;margin:0;cursor:pointer;max-width:100%;font:400 12px/1.6 var(--body);color:var(--muted);text-align:left;letter-spacing:0}
+.contact-form .privacy-check input[type="checkbox"]{flex:0 0 18px;width:18px;height:18px;min-width:18px;min-height:18px;padding:0;margin:1px 0 0;accent-color:var(--orange)}
+.contact-form .privacy-check span{display:block;min-width:0}
+.contact-form .form-note{font-size:12px;line-height:1.6;color:var(--muted);margin:12px 0 25px;text-align:left}
+.contact-form .contact-submit{border:0;cursor:pointer;min-width:210px;justify-content:space-between}
+.contact-form .form-status{margin:14px 0 0;min-height:1.5em;font-size:13px;text-align:left}
+@media(max-width:900px){.contact-layout{grid-template-columns:minmax(0,1fr);gap:38px}.contact-social{margin-top:30px;max-width:100%}.contact-intro{max-width:620px}.booking .contact-intro h2{font-size:clamp(52px,8vw,78px)}}
+@media(max-width:600px){.contact-grid{grid-template-columns:minmax(0,1fr);row-gap:19px}.contact-form .field-wide{grid-column:1}.contact-form .contact-submit{width:100%}.booking .contact-intro h2{font-size:clamp(46px,11vw,66px)}.booking.section{padding-block:76px}.contact-layout{gap:32px}}
