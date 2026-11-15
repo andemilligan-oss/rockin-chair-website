@@ -53,9 +53,11 @@ Es werden bewusst keine unbestätigten Auftrittstermine, persönlichen Kontaktda
 
 ## Kontaktformular
 
-Das Formular in `index.html` erstellt über `script.js` eine vorbereitete E-Mail an `ande.milligan@googlemail.com`. Der Versand erfolgt **nicht automatisch**: Die besuchende Person muss die E-Mail im eigenen E-Mail-Programm absenden. GitHub Pages besitzt selbst keinen E-Mail-Versanddienst. Das Formular speichert keine Angaben auf dem Server.
+Das Formular sendet Anfragen direkt von der Website über [FormSubmit](https://formsubmit.co/) an `ande.milligan@googlemail.com`, ohne das E-Mail-Programm der Besuchenden zu öffnen. Das Formular sendet per JavaScript und zeigt eine Rückmeldung auf der Website.
 
-Für einen späteren direkten Versand ohne E-Mail-Programm wird ein separat einzurichtender Formular-Dienst oder Server-Endpunkt benötigt.
+**Einmalige Aktivierung erforderlich:** Bei der ersten Test-Einsendung schickt FormSubmit eine Bestätigungsnachricht an die Gmail-Adresse. Erst nach Bestätigung des Aktivierungslinks kann die Zustellung regulär funktionieren. Die Aktivierung und der tatsächliche Eingang müssen manuell getestet werden.
+
+Der Formulardienst verarbeitet die eingegebenen personenbezogenen Daten. Vor der produktiven Nutzung müssen Datenschutzhinweise und die datenschutzrechtliche Eignung des Dienstes geprüft werden.
 
 ## Rechtliches
 
